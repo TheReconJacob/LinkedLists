@@ -50,3 +50,12 @@ Link* LinkedList::Delete(int key) {
 	}
 	return current;
 }
+
+Link* LinkedList::DeleteFirst() {
+	if (first == 0) {
+		return 0;
+	}
+	Link* temp = first;
+	first = first->next;
+	return temp;
+}

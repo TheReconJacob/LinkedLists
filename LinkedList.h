@@ -9,4 +9,5 @@ public:
 	void Display();
 	Link* Find(int key);
 	Link* Delete(int key);
+	Link* DeleteFirst();
 };

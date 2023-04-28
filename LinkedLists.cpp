@@ -23,6 +23,12 @@ int main() {
     else
         std::cout << "Data: " << key << " was not found." << std::endl;
 
+    Link* deletedFirstResult = list.DeleteFirst();
+    if (deletedFirstResult != 0)
+        std::cout << "Data: " << deletedFirstResult->data << " was deleted." << std::endl;
+    else
+        std::cout << "Data: " << key << " was not found." << std::endl;
+
     return 0;
 }
 
