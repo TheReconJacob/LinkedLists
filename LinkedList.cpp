@@ -17,3 +17,15 @@ void LinkedList::Display() {
 		current = current->next;
 	}
 }
+Link* LinkedList::Find(int key) {
+	Link* current = first;
+	while (current->data != key) {
+		if (current->next == 0) {
+			return 0;
+		}
+		else {
+			current = current->next;
+		}
+	}
+	return current;
+}

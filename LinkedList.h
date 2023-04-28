@@ -7,4 +7,5 @@ public:
 	bool IsEmpty();
 	void Insert(Link* newLink);
 	void Display();
+	Link* Find(int key);
 };

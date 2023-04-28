@@ -2,10 +2,20 @@
 //
 
 #include <iostream>
+#include "LinkedList.h"
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    LinkedList list;
+    list.Insert(new Link(1));
+    list.Insert(new Link(2));
+    list.Insert(new Link(3));
+
+    int key = 2;
+    Link* result = list.Find(key);
+    
+    std::cout << "Data: " << result->data << " was found." << std::endl;
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
