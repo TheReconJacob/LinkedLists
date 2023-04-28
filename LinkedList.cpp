@@ -29,3 +29,24 @@ Link* LinkedList::Find(int key) {
 	}
 	return current;
 }
+
+Link* LinkedList::Delete(int key) {
+	Link* current = first;
+	Link* previous = first;
+	while (current->data != key) {
+		if (current->next == 0) {
+			return 0;
+		}
+		else {
+			previous = current;
+			current = current->next;
+		}
+	}
+	if (current == first) {
+		first = first->next;
+	}
+	else {
+		previous->next = current->next;
+	}
+	return current;
+}

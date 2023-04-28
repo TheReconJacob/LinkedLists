@@ -8,4 +8,5 @@ public:
 	void Insert(Link* newLink);
 	void Display();
 	Link* Find(int key);
+	Link* Delete(int key);
 };

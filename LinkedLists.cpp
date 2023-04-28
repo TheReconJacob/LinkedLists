@@ -10,13 +10,19 @@ int main() {
     list.Insert(new Link(2));
     list.Insert(new Link(3));
 
-    int key = 9;
+    int key = 2;
     Link* result = list.Find(key);
-    
     if(result !=0)
         std::cout << "Data: " << result->data << " was found." << std::endl;
     else
         std::cout << "Data: " << key << " was not found." << std::endl;
+
+    Link* deletedResult = list.Delete(key);
+    if (deletedResult != 0)
+        std::cout << "Data: " << deletedResult->data << " was deleted." << std::endl;
+    else
+        std::cout << "Data: " << key << " was not found." << std::endl;
+
     return 0;
 }
 
