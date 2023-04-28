@@ -10,11 +10,13 @@ int main() {
     list.Insert(new Link(2));
     list.Insert(new Link(3));
 
-    int key = 2;
+    int key = 9;
     Link* result = list.Find(key);
     
-    std::cout << "Data: " << result->data << " was found." << std::endl;
-
+    if(result !=0)
+        std::cout << "Data: " << result->data << " was found." << std::endl;
+    else
+        std::cout << "Data: " << key << " was not found." << std::endl;
     return 0;
 }
 
